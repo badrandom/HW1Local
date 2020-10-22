@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
@@ -16,7 +15,6 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.ArrayList;
 
 public class RecyclerFragment extends Fragment {
@@ -51,10 +49,10 @@ public class RecyclerFragment extends Fragment {
         list.setAdapter(adapter);
         int col;
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
-            col =4;
+            col = getResources().getInteger(R.integer.landscape);
         }
         else {
-            col = 3;
+            col = getResources().getInteger(R.integer.portrait);
         }
         list.setLayoutManager(new GridLayoutManager(view.getContext(), col));
 
@@ -92,9 +90,9 @@ public class RecyclerFragment extends Fragment {
         public void onBindViewHolder(@NonNull MyHolder holder, int position) {
             holder.txtView.setText(listDataAdapter.get(position).number);
             if (position % 2 == 0) {
-                holder.txtView.setTextColor(getResources().getColor(R.color.colorBlue));
+                holder.txtView.setTextColor(getResources().getColor(R.color.colorEven));
             } else {
-                holder.txtView.setTextColor(ContextCompat.getColor(getContext(), R.color.colorRed));
+                holder.txtView.setTextColor(getResources().getColor(R.color.colorEven));
             }
         }
 
@@ -119,7 +117,7 @@ public class RecyclerFragment extends Fragment {
                             beginTransaction().
                             replace(R.id.recycler_fragment, fragment).
                             addToBackStack(null).
-                            commitAllowingStateLoss();
+                            commit();
                 }
             });
         }

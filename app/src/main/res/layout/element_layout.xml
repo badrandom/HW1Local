@@ -2,7 +2,7 @@
 <LinearLayout android:layout_height="wrap_content"
     android:layout_width="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_margin="5dp"
+    android:layout_margin="@dimen/elementLinearLayoutMargin"
     android:orientation="vertical"
     android:background="@color/backColor"
 
@@ -11,9 +11,9 @@
         android:textColor="@color/textColor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:textSize="30sp"
-        tools:text="20"
+        android:layout_margin="@dimen/elementTextViewMargin"
+        android:textSize="@dimen/elementTextViewTextSize"
+        tools:text="@string/tools_text"
         android:gravity="center"
         android:id="@+id/number"
         android:layout_gravity="center"/>

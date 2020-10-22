@@ -11,10 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        tools:text="20"
+        tools:text="@string/tools_text"
         android:textColor="@color/textColor"
         android:layout_gravity="center"
-        android:textSize="100sp"
+        android:textSize="@dimen/fragmentNumberTextSize"
         android:id="@+id/num_text"/>
 
 </FrameLayout>

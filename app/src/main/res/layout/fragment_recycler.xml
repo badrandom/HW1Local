@@ -24,10 +24,10 @@
         android:layout_height="wrap_content"
         android:background="@color/backColor"
         android:id="@+id/button"
-        android:text="Add"
+        android:text="@string/add_button"
         android:textColor="@color/textColor"
         android:layout_gravity="bottom"
-        android:textSize="20sp"
+        android:textSize="@dimen/fragmentRecyclerTextSize"
         />
 
 </LinearLayout>
