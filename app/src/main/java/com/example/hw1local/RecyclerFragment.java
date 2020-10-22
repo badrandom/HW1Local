@@ -92,7 +92,7 @@ public class RecyclerFragment extends Fragment {
             if (position % 2 == 0) {
                 holder.txtView.setTextColor(getResources().getColor(R.color.colorEven));
             } else {
-                holder.txtView.setTextColor(getResources().getColor(R.color.colorEven));
+                holder.txtView.setTextColor(getResources().getColor(R.color.colorOdd));
             }
         }
 
@@ -122,7 +122,6 @@ public class RecyclerFragment extends Fragment {
             });
         }
     }
-
 
     class Data {
         String number;

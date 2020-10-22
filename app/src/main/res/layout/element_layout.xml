@@ -17,5 +17,4 @@
         android:gravity="center"
         android:id="@+id/number"
         android:layout_gravity="center"/>
-
 </LinearLayout>
