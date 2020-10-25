@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">HW1Local</string>
+    <string name="add_button">Add</string>
+    <string name="tools_text">20</string>
 </resources>
